@@ -1,0 +1,30 @@
+
+> admin-panel@0.1.0 build
+> next build --debug
+
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/vansh/package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * /Users/vansh/ReactProject/LocalMarket/Admin/admin-panel/package-lock.json
+   * /Users/vansh/ReactProject/package-lock.json
+
+▲ Next.js 16.1.1 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 5.9s
+  Running TypeScript ...
+  Collecting page data using 7 workers ...
+  Generating static pages using 7 workers (0/67) ...
+  Generating static pages using 7 workers (16/67) 
+  Generating static pages using 7 workers (33/67) 
+  Generating static pages using 7 workers (50/67) 
+Error occurred prerendering page "/". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: isAuthenticated is not defined
+    at Fk (.next/server/chunks/ssr/ReactProject_LocalMarket_Admin_admin-panel_52989602._.js:28:10767) {
+  digest: '4001740170'
+}
+Export encountered an error on /page: /, exiting the build.
+⨯ Next.js build worker exited with code: 1 and signal: null

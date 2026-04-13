@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0F172A;
+  
+  /* Brand Colors */
+  --orange: #E86A2C;
+  --blue: #4A6CF7;
+  
+  /* Text Colors */
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #9CA3AF;
+  --text-light: #CBD5E1;
+  
+  /* Status Colors */
+  --success: #16A34A;
+  --danger: #DC2626;
+  --warning: #F59E0B;
+  --info: #3B82F6;
+  
+  /* Backgrounds */
+  --dark-bg: #0B1324;
+  --divider: #E5E7EB;
+  --highlight-bg: #FFF4EC;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom gradient utility */
+.gradient-primary {
+  background: linear-gradient(to right, var(--orange), var(--blue));
+}
+
+.gradient-text {
+  background: linear-gradient(to right, var(--orange), var(--blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
