@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const GOOGLE_API_KEY = process.env.GOOGLE_MAPS_API_KEY || 'AIzaSyAonK15hotzDslX4ePjIbmizRii-7Ng4QE';
+const GOOGLE_API_KEY = process.env.GOOGLE_MAPS_API_KEY || '';
 
 export async function GET(request: NextRequest) {
     try {
@@ -15,7 +15,7 @@ export async function GET(request: NextRequest) {
         try {
             const googleUrl = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${encodeURIComponent(q)}&key=${GOOGLE_API_KEY}&region=in`;
             const googleRes = await fetch(googleUrl);
-            
+
             if (googleRes.ok) {
                 const googleData = await googleRes.json();
                 if (googleData.status === 'OK' && googleData.results.length > 0) {
